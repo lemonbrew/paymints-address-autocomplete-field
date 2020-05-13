@@ -10,15 +10,10 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.js$/, include: path.resolve("src"), loader: "babel-loader" },
-      {
-        test: /\.css$/,
-        loader: "style-loader!css-loader"
-      }
+      { test: /\.js$/, include: path.resolve("src"), loader: "babel-loader" }
     ]
   },
   externals: {
-    react: "react",
-    "react-dom": "react-dom"
+    react: "react"
   }
 };

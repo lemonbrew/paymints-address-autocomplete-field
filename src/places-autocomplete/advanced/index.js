@@ -1,11 +1,3 @@
-/**
- * (franco.montenegro)
- * Some of the props returned by Google are not compliant with our formatter
- * rules (predefined by air ui), this is why we are disabling eslint in this file
- */
-
-/* eslint-disable */
-
 import React, { useState } from 'react'
 import { AutoComplete, Button } from 'antd'
 import { getGeocode } from 'use-places-autocomplete'

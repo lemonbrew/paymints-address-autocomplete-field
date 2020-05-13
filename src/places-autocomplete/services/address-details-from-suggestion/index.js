@@ -1,11 +1,3 @@
-/**
- * (franco.montenegro)
- * Some of the props returned by Google are not compliant with our formatter
- * rules (predefined by air ui), this is why we are disabling eslint in this file
- */
-
-/* eslint-disable */
-
 function firstAddressComponentFromSuggestion(googleSuggestion, types) {
   const emptyComponent = {}
   if (typeof googleSuggestion !== 'object') return emptyComponent
