@@ -11,11 +11,22 @@ module.exports = {
   module: {
     rules: [
       { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" },
-      { test: /\.css$/, loader: "style-loader!css-loader" }
+      {
+        test: /\.less$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'less-loader',
+            options: {
+              lessOptions: { javascriptEnabled: true }
+            }
+          }
+        ]
+      }
     ]
   },
   externals: {
-    react: "react",
-    antd: "antd"
+    react: "react"
   }
 };
