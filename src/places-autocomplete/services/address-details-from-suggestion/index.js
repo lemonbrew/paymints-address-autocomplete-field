@@ -25,6 +25,11 @@ function addressFromSuggestion(googleSuggestion) {
   return googleSuggestion.formatted_address
 }
 
+function streetNumberFromSuggestion(googleSuggestion) {
+  const streetNumber = firstAddressComponentFromSuggestion(googleSuggestion, ['street_number'])
+  return streetNumber.long_name
+}
+
 function cityFromSuggestion(googleSuggestion) {
   const city = firstAddressComponentFromSuggestion(googleSuggestion, ['locality'])
   return city.long_name
@@ -45,11 +50,13 @@ function zipFromSuggestion(googleSuggestion) {
 
 export default function addressDetailsFromSuggestion(googleSuggestion) {
   const address = addressFromSuggestion(googleSuggestion)
+  const streetNumber = streetNumberFromSuggestion(googleSuggestion)
   const city = cityFromSuggestion(googleSuggestion)
   const state = stateFromSuggestion(googleSuggestion)
   const zip = zipFromSuggestion(googleSuggestion)
   return {
     address,
+    streetNumber,
     city,
     state,
     zip,
