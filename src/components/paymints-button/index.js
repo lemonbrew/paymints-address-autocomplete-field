@@ -15,14 +15,14 @@ export { BUTTON_TYPE }
 
 export default function PaymintsButton({ noShadow, pill, block, type, className, ...props }) {
   const css = classNames(className, 'button', {
-    primary: type === BUTTON_TYPE.PRIMARY,
-    blue: type === BUTTON_TYPE.BLUE,
-    inverse: type === BUTTON_TYPE.INVERSE,
-    link: type === BUTTON_TYPE.LINK,
-    linkDark: type === BUTTON_TYPE.LINK_DARK,
-    block: block,
-    pill: pill,
-    noShadow: noShadow,
+    [styles.primary]: type === BUTTON_TYPE.PRIMARY,
+    [styles.blue]: type === BUTTON_TYPE.BLUE,
+    [styles.inverse]: type === BUTTON_TYPE.INVERSE,
+    [styles.link]: type === BUTTON_TYPE.LINK,
+    [styles.linkDark]: type === BUTTON_TYPE.LINK_DARK,
+    [styles.block]: block,
+    [styles.pill]: pill,
+    [styles.noShadow]: noShadow,
   })
   return <Button className={css} {...props} />
 }
