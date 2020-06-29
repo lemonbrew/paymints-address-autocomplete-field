@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import scriptLoader from 'react-async-script-loader'
 import GOOGLE_MAPS_KEY from './google-maps-key'
-import { PlacesAutocompleteAdvanced, PlacesAutocompleteSimple } from './index'
+import { PlacesAutocompleteAdvanced, PlacesAutocompleteSimple, PaymintsButton, BUTTON_TYPE } from './index'
 
 const TestSimpleInput = () => (
   <div>
@@ -27,6 +27,11 @@ const Test = ({ isScriptLoadSucceed }) => (
     {!isScriptLoadSucceed && <div>There was an error loading Google maps</div>}
     {isScriptLoadSucceed && <TestAdvancedInput />}
     {isScriptLoadSucceed && <TestSimpleInput />}
+    {isScriptLoadSucceed &&
+      <PaymintsButton block pill noShadow type={BUTTON_TYPE.PRIMARY}>
+        Request funds
+      </PaymintsButton>
+    }
   </>
 )
 
