@@ -14,7 +14,7 @@ const BUTTON_TYPE = {
 export { BUTTON_TYPE }
 
 export default function PaymintsButton({ noShadow, pill, block, type, className, ...props }) {
-  const css = classNames(className, 'button', {
+  const css = classNames(className, [styles.button], {
     [styles.primary]: type === BUTTON_TYPE.PRIMARY,
     [styles.blue]: type === BUTTON_TYPE.BLUE,
     [styles.inverse]: type === BUTTON_TYPE.INVERSE,
