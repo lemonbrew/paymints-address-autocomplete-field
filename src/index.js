@@ -12,6 +12,7 @@ import PaymintsSelect from './components/paymints-select'
 import PaymintsTable from './components/paymints-table'
 import PaymintsTag from './components/paymints-tag'
 import PaymintsTextArea from './components/paymints-text-area'
+import PaymintsHarveyBall, { BALL_TYPE } from './components/paymints-harvey-ball'
 
 import 'antd/lib/auto-complete/style/index.less'
 import 'antd/lib/button/style/index.less'
@@ -38,4 +39,6 @@ export {
   PaymintsTable,
   PaymintsTag,
   PaymintsTextArea,
+  PaymintsHarveyBall,
+  BALL_TYPE,
 }

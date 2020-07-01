@@ -23,6 +23,8 @@ import {
   PaymintsTable,
   PaymintsTag,
   PaymintsTextArea,
+  PaymintsHarveyBall,
+  BALL_TYPE,
 } from './index'
 
 const TestSimpleInput = () => (
@@ -51,7 +53,7 @@ const TestPaymintsButton = () => (
   <div>
     <br/>
     Paymints Button:
-    <PaymintsButton block noShadow type={BUTTON_TYPE.LIGHT_BLUE}>
+    <PaymintsButton block noShadow type={BUTTON_TYPE.LINK}>
       Request funds
     </PaymintsButton>
     <br/>
@@ -65,6 +67,17 @@ const TestPaymintsCard = () => (
     <PaymintsCard type={CARD_TYPE.PRIMARY}>
       Card
     </PaymintsCard>
+    <br/>
+  </div>
+)
+
+const TestPaymintsBall = () => (
+  <div>
+    <br/>
+    Paymints Harvey Ball:
+    <PaymintsHarveyBall type={BALL_TYPE.INACTIVE}>
+      Inactive
+    </PaymintsHarveyBall>
     <br/>
   </div>
 )
@@ -199,6 +212,7 @@ const Test = ({ isScriptLoadSucceed }) => (
     {isScriptLoadSucceed && <TestPaymintsTable />}
     {isScriptLoadSucceed && <TestPaymintsTag />}
     {isScriptLoadSucceed && <TestPaymintsTextArea />}
+    {isScriptLoadSucceed && <TestPaymintsBall />}
   </>
 )
 

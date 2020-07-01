@@ -1,0 +1,30 @@
+.container {
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.ball {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  float: left;
+  margin: 0 5px 0 0;
+}
+
+.active {
+  background-color: #6ad397;
+}
+
+.pending {
+  background-color: #fed249;
+}
+
+.inactive {
+  background-color: #636363;
+}
+
+.children {
+  font-family: Poppins;
+  font-size: 14px;
+  color: #454545;
+}
