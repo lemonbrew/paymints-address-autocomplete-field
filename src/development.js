@@ -25,6 +25,8 @@ import {
   PaymintsTextArea,
   PaymintsHarveyBall,
   BALL_TYPE,
+  PaymintsCurrencyInput,
+  PaymintsNumberFormat,
 } from './index'
 
 const TestSimpleInput = () => (
@@ -190,6 +192,27 @@ const TestPaymintsTextArea = () => (
   </div>
 )
 
+const TestPaymintsCurrencyInput = () => (
+  <div>
+    <br/>
+    Paymints Currency Input:
+    <PaymintsCurrencyInput />
+    <br/>
+  </div>
+)
+
+const TestPaymintsNumberFormat = () => (
+  <div>
+    <br/>
+    Paymints Number Format:
+    <PaymintsNumberFormat
+      number={10}
+      decimals={2}
+      format="currency"
+    />
+  </div>
+)
+
 const Test = ({ isScriptLoadSucceed }) => (
   <>
     {isScriptLoadSucceed &&
@@ -213,6 +236,8 @@ const Test = ({ isScriptLoadSucceed }) => (
     {isScriptLoadSucceed && <TestPaymintsTag />}
     {isScriptLoadSucceed && <TestPaymintsTextArea />}
     {isScriptLoadSucceed && <TestPaymintsBall />}
+    {isScriptLoadSucceed && <TestPaymintsCurrencyInput />}
+    {isScriptLoadSucceed && <TestPaymintsNumberFormat />}
   </>
 )
 
