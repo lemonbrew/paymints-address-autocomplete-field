@@ -48,8 +48,6 @@ function zipFromSuggestion(googleSuggestion) {
 }
 
 export default function addressDetailsFromSuggestion(googleSuggestion) {
-  console.log(googleSuggestion);
-
   const address = addressFromSuggestion(googleSuggestion)
   const streetNumber = streetNumberFromSuggestion(googleSuggestion)
   const city = cityFromSuggestion(googleSuggestion)
