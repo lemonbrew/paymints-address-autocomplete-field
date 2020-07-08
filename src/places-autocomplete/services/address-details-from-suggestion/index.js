@@ -38,7 +38,6 @@ function cityFromSuggestion(googleSuggestion) {
 function stateFromSuggestion(googleSuggestion) {
   const state = firstAddressComponentFromSuggestion(googleSuggestion, [
     'administrative_area_level_1',
-    'administrative_area_level_2',
   ])
   return state.long_name
 }
@@ -49,6 +48,8 @@ function zipFromSuggestion(googleSuggestion) {
 }
 
 export default function addressDetailsFromSuggestion(googleSuggestion) {
+  console.log(googleSuggestion);
+
   const address = addressFromSuggestion(googleSuggestion)
   const streetNumber = streetNumberFromSuggestion(googleSuggestion)
   const city = cityFromSuggestion(googleSuggestion)
