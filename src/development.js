@@ -55,7 +55,7 @@ const TestPaymintsButton = () => (
   <div>
     <br/>
     Paymints Button:
-    <PaymintsButton block noShadow type={BUTTON_TYPE.LINK}>
+    <PaymintsButton block noShadow type={BUTTON_TYPE.BLUE}>
       Request funds
     </PaymintsButton>
     <br/>

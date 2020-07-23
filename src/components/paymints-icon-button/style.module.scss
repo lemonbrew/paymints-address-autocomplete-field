@@ -6,9 +6,10 @@
     0 2px 4px -1px rgba(0, 0, 0, 0.2) !important;
   width: 50px !important;
   height: 50px !important;
+  padding: 0 !important;
 
   i {
-    line-height: 26px !important;
+    line-height: normal !important;
   }
 }
 
