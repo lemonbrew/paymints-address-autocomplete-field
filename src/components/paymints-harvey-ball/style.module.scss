@@ -32,13 +32,21 @@
 }
 
 .viewed {
-  background-color: #708090;
+  background-color: #708090 !important;
+}
+
+.completed {
+  background-color: #6ad397 !important;
+}
+
+.cancelled {
+  background-color: #696969 !important;
 }
 
 .error {
-  background-color: #d45774;
+  background-color: #d45774 !important;
 }
 
 .default {
-  background-color: #4162fa;
+  background-color: #4162fa !important;
 }

@@ -9,7 +9,9 @@ const BALL_TYPE = {
   CREATED: "created",
   SENT: "sent",
   VIEWED: "viewed",
+  COMPLETED: "completed",
   ERROR: "error",
+  CANCELLED: "cancelled",
 };
 
 export { BALL_TYPE };
@@ -22,6 +24,8 @@ export default function PaymintsHarveyBall({ type, className, children }) {
     [styles.created]: type === BALL_TYPE.CREATED,
     [styles.sent]: type === BALL_TYPE.SENT,
     [styles.viewed]: type === BALL_TYPE.VIEWED,
+    [styles.completed]: type === BALL_TYPE.COMPLETED,
+    [styles.cancelled]: type === BALL_TYPE.CANCELLED,
     [styles.error]: type === BALL_TYPE.ERROR,
   });
   return (
